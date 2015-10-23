@@ -1,0 +1,2056 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<Configuration>
+	<General>
+		<Product>GpsNavis</Product>
+		<Version>1.7</Version>
+
+		<TraceName>Port-Royal des Champs</TraceName>
+	</General>
+
+	<Behavior>
+		<Directory>/var/opt/MI/datas</Directory>
+		<ScaleLatLonBigDecimal>6</ScaleLatLonBigDecimal>
+		<ScaleEleBigDecimal>1</ScaleEleBigDecimal>
+		<NbrIndentation>3</NbrIndentation>
+		<GpxTZOffset>1</GpxTZOffset>
+	</Behavior>
+
+	<Filtering>
+		<Duration>
+			<BetweenPeriods>300</BetweenPeriods> <!-- In seconds -->
+		</Duration>
+		<Speed>
+			<ThresholdHigh>4.0</ThresholdHigh>         <!-- In km/h -->
+			<TimeoutHigh>60</TimeoutHigh>              <!-- In seconds -->
+			<ThresholdLow>0.3</ThresholdLow>           <!-- In km/h -->
+			<TimeoutLow>60</TimeoutLow>                <!-- In seconds -->
+		</Speed>
+		<Distance>
+			<BetweenSamples>10</BetweenSamples>        <!-- In meters -->
+		</Distance>
+	</Filtering>
+
+	<Trace name="Gps20120129_LaMerantaise_(Aller)" >
+		<!-- Informations for <metadata> tag -->
+		<Author>crudel (ALS Elancourt)</Author>
+		<Description>La Merantaise et l'Yvette</Description>
+		<DateTime>2012/02/13 10:00:00</DateTime>
+
+		<TrackpointNameName>Aller</TrackpointNameName>
+
+		<!-- Name with suffix -->
+		<InputFileName>Gps20120129_LaMerantaise.key</InputFileName>
+
+		<!-- Local time -->
+		<StartDate>2012/01/29 08:09:00</StartDate>
+		<EndDate>  2012/01/29 08:18:00</EndDate>
+		<!-- No Duration because EndDate YYYY/MM/DD HH:MM:SS-->
+
+		<!-- Name without suffix for .txt, .xml and .gpx -->
+		<OutputFiles>Gps20120129_LaMerantaise_(Aller)</OutputFiles>
+	</Trace>
+
+	<Trace name="La Merantaise (Randonnee)" >
+		<!-- Informations for <metadata> tag -->
+		<Author>crudel (ALS Elancourt)</Author>
+		<Description>La Merantaise et l'Yvette</Description>
+		<DateTime>2012/02/13 10:00:00</DateTime>
+	
+		<TrackpointName>Randonn&amp;eacute;e</TrackpointName>
+
+		<!-- Name with suffix -->
+		<InputFileName>Gps20120129_LaMerantaise.key</InputFileName>
+
+		<!-- Local time -->
+		<StartDate>2012/01/29 09:05:00</StartDate>
+		<EndDate>  2012/01/29 12:45:00</EndDate>
+		<!-- No Duration because EndDate YYYY/MM/DD HH:MM:SS-->
+
+		<!-- Name without suffix for .txt, .xml and .gpx -->
+		<OutputFiles>Gps20120129_LaMerantaise_(Randonnee)</OutputFiles>
+	</Trace>
+
+	<Trace name="La Merantaise (Test Waypoints/Smooth/Cut)" >
+		<!-- Informations for <metadata> tag -->
+		<Author>crudel (ALS Elancourt)</Author>
+		<Description>La Merantaise et l'Yvette</Description>
+	
+		<TrackpointName>Randonn&amp;eacute;e</TrackpointName>
+
+		<!-- Name with suffix -->
+		<InputFileName>Gps20120129_LaMerantaise.key</InputFileName>
+
+		<!-- Local time -->
+		<StartDate>2012/01/29 11:15:00</StartDate>
+		<EndDate>  2012/01/29 11:30:00</EndDate>
+		<!-- No Duration because EndDate YYYY/MM/DD HH:MM:SS-->
+
+		<!-- Plages horaires lissees (suppression des zones de pietinement) -->
+		<!-- Seules les HH:MM:SS sont definies, YYYY/MM/DD egale @StartDate -->
+		<Smooth>
+			<StartTime>11:19:00</StartTime>
+			<EndTime>  11:24:00</EndTime>		
+		</Smooth>
+		<Cut>
+			<Description>1st Pause...</Description>
+			<StartTime>11:17:00</StartTime>
+			<EndTime>  11:18:00</EndTime>		
+		</Cut>
+		<Cut>
+			<Description>2nd Pause...</Description>
+			<StartTime>11:25:00</StartTime>
+			<EndTime>  11:27:00</EndTime>		
+		</Cut>
+
+		<!-- Waypoints (definition by time eor by the coordinates) -->
+		<Waypoint>
+			<Name>Wp0</Name>
+			<Description>1st Waypoint...</Description>
+			<Lat>48.722000</Lat>
+			<Lon> 2.120000</Lon>
+		</Waypoint>
+		<Waypoint>
+			<Name>Wp1</Name>
+			<Description>2nd Waypoint...</Description>
+			<Lat>48.723000</Lat>
+			<Lon> 2.108000</Lon>
+		</Waypoint>
+		<Waypoint>
+			<Name>Wp2</Name>
+			<Description>3rd Waypoint...</Description>
+			<Time>11:28:00</Time>
+		</Waypoint>
+		<Waypoint>
+			<Name>Wp3</Name>
+			<Description>4th Waypoint...</Description>
+			<Time>11:15:30</Time>
+		</Waypoint>
+		<Waypoint>
+			<Name>Wp4</Name>
+			<Description>5th Waypoint...</Description>
+			<Time>11:16:00</Time>
+		</Waypoint>
+
+		<!-- Name without suffix for .txt, .xml and .gpx -->
+		<OutputFiles>Gps20120129_LaMerantaise_(Test)</OutputFiles>
+		<FlgOutputRecords>Yes</FlgOutputRecords>
+	</Trace>
+
+	<Trace name="Bazoches" >
+		<Author>crudel</Author>
+		<Description>Bazoches</Description>
+
+		<TrackpointName>Randonn&amp;eacute;e</TrackpointName>
+
+		<!-- Name with suffix -->
+		<InputFileName>Gps20120115_Bazoches.key</InputFileName>
+
+		<!-- Local time -->
+		<StartDate>2012/01/15 08:52:00</StartDate>
+		<EndDate>  2012/01/15 11:59:00</EndDate>
+		<!-- No Duration because EndDate YYYY/MM/DD HH:MM:SS-->
+
+		<!-- Name without suffix for .txt, .xml and .gpx -->
+		<OutputFiles>Gps20120115_Bazoches</OutputFiles>
+	</Trace>
+
+	<Trace name="Montfort LAmaury (Randonnee)" >
+		<!-- Informations for <metadata> tag -->
+		<Author>crudel (ALS Elancourt)</Author>
+		<Description>Des hauts de Monfort aux Etangs de Hollande</Description>
+
+		<TrackpointName>Randonn&amp;eacute;e</TrackpointName>
+
+		<!-- Name with suffix -->
+		<InputFileName>Gps20120212_MontfortLAmaury.key</InputFileName>
+
+		<!-- Local time -->
+		<StartDate>2012/02/12 09:05:00</StartDate>
+		<EndDate>  2012/02/12 13:05:00</EndDate>		
+		<!-- No Duration because EndDate YYYY/MM/DD HH:MM:SS-->
+		<!-- Duration>2:15</Duration -->
+
+		<!-- Name without suffix for .txt, .xml and .gpx -->
+		<OutputFiles>Gps20120212_MontfortLAmaury_(Randonnee)</OutputFiles>
+		<FlgOutputXml>No</FlgOutputXml>
+		<FlgOutputRecords>Yes</FlgOutputRecords>
+
+		<!-- Plages horaires lissees (suppression des zones de pietinement) -->
+		<!-- Seules les HH:MM:SS sont definies, YYYY/MM/DD egale @StartDate -->
+		<Smooth>
+			<StartTime>10:05:00</StartTime>
+			<EndTime>  10:10:00</EndTime>		
+		</Smooth>
+		<Smooth>
+			<StartTime>11:20:00</StartTime>
+			<EndTime>  11:30:00</EndTime>		
+		</Smooth>
+
+		<!-- Plages horaires coupees (ferme et ouvre un nouveau <trk>) -->
+		<Cut>
+			<Description>Arret technique</Description>
+			<StartTime>12:40:00</StartTime>
+			<EndTime>  12:55:00</EndTime>		
+		</Cut>
+		<Cut>
+			<Description>Impasse...</Description>
+			<StartTime>09:10:00</StartTime>
+			<EndTime>  09:15:59</EndTime>		
+		</Cut>
+		<Cut>
+			<Description>Pause...</Description>
+			<StartTime>10:20:00</StartTime>
+			<EndTime>  10:32:00</EndTime>		
+		</Cut>
+		<Cut>
+			<Description>Reprise</Description>
+			<StartTime>09:11:00</StartTime>
+			<EndTime>  09:15:59</EndTime>		
+		</Cut>
+
+	</Trace>
+
+	<Trace name="Montfort LAmaury (Retour)" >
+		<!-- Informations for <metadata> tag -->
+		<Author>crudel (ALS Elancourt)</Author>
+		<Description>Des hauts de Monfort aux Etangs de Hollande</Description>
+		<DateTime>2012/02/13 10:00:00</DateTime>
+
+		<TrackpointName>Retour</TrackpointName>
+
+		<!-- Name with suffix -->
+		<InputFileName>Gps20120212_MontfortLAmaury.key</InputFileName>
+
+		<!-- Local time -->
+		<StartDate>2012/02/12 13:09:00</StartDate>
+		<EndDate>  2012/02/12 13:42:00</EndDate>
+		<!-- No Duration because EndDate YYYY/MM/DD HH:MM:SS-->
+		<!-- Duration>2:15</Duration -->
+
+		<!-- Name without suffix for .txt, .xml and .gpx -->
+		<OutputFiles>Gps20120212_MontfortLAmaury_(Retour)</OutputFiles>
+		<FlgOutputXml>Yes</FlgOutputXml>
+	</Trace>
+
+	<Trace name="Home (2012/02/20)" >
+		<!-- Informations for <metadata> tag -->
+		<Author>crudel</Author>
+		<Description>Test Arret/Marche/Reset</Description>
+
+		<TrackpointName>Randonn&amp;eacute;e</TrackpointName>
+
+		<!-- Name with suffix -->
+		<InputFileName>Gps20120220_Home.key</InputFileName>
+
+		<!-- Local time -->
+		<StartDate>2012/02/18 09:00:00</StartDate>
+		<EndDate>  2012/02/20 09:00:00</EndDate>		
+		<!-- No Duration because EndDate YYYY/MM/DD HH:MM:SS-->
+		<!-- Duration>2:15</Duration -->
+
+		<!-- Name without suffix for .txt, .xml and .gpx -->
+		<OutputFiles>Gps20120220_Home</OutputFiles>
+	</Trace>
+
+	<Trace name="Home (2012/02/23)" >
+		<!-- Informations for <metadata> tag -->
+		<Author>crudel</Author>
+		<Description>Test Arret/Marche/Reset</Description>
+
+		<TrackpointName>Randonn&amp;eacute;e</TrackpointName>
+
+		<!-- Name with suffix -->
+		<InputFileName>Gps20120223_Home.key</InputFileName>
+
+		<!-- Local time -->
+		<StartDate>2012/02/21 21:30:00</StartDate>
+		<EndDate>  2012/02/21 21:59:00</EndDate>		
+		<!-- No Duration because EndDate YYYY/MM/DD HH:MM:SS-->
+		<!-- Duration>2:15</Duration -->
+
+		<!-- Name without suffix for .txt, .xml and .gpx -->
+		<OutputFiles>Gps20120223_Home</OutputFiles>
+	</Trace>
+
+	<Trace name="Chamonix (Split)" >
+		<!-- Name with suffix -->
+		<InputFileName>Gps20120304_Chamonix.key</InputFileName>
+
+		<!-- Name without suffix for .txt, .xml and .gpx -->
+		<OutputFiles>Gps20120304_Chamonix</OutputFiles>
+		<FlgSplit>Yes</FlgSplit>
+	</Trace>
+
+	<Trace name="Chamonix (Aiguilles)" >
+		<!-- Informations for <metadata> tag -->
+		<Author>crudel</Author>
+		<Description>Chamonix</Description>
+
+		<TrackpointName>Randonn&amp;eacute;e</TrackpointName>
+
+		<!-- Name with suffix -->
+		<InputFileName>Gps20120304_Chamonix.4</InputFileName>
+
+		<!-- Local time -->
+		<StartDate>2012/02/28 09:00:00</StartDate>
+		<EndDate>  2012/02/28 12:30:00</EndDate>
+		<!-- No Duration because EndDate YYYY/MM/DD HH:MM:SS-->
+		<!-- Duration>2:15</Duration -->
+
+		<!-- Name without suffix for .txt, .xml and .gpx -->
+		<OutputFiles>Gps20120304_Chamonix_(Aiguilles)</OutputFiles>
+		<FlgOutputXml>No</FlgOutputXml>
+		<FlgOutputRecords>Yes</FlgOutputRecords>
+	</Trace>
+
+	<Trace name="Chamonix (Desert blanc)" >
+		<!-- Informations for <metadata> tag -->
+		<Author>crudel</Author>
+		<Description>Chamonix</Description>
+
+		<TrackpointName>Randonn&amp;eacute;e</TrackpointName>
+
+		<!-- Name with suffix -->
+		<InputFileName>Gps20120304_Chamonix.20120229</InputFileName>
+
+		<!-- Local time -->
+		<StartDate>2012/02/29 14:08:00</StartDate>
+		<EndDate>  2012/02/29 15:55:00</EndDate>
+		<!-- No Duration because EndDate YYYY/MM/DD HH:MM:SS-->
+		<!-- Duration>2:15</Duration -->
+
+		<!-- Name without suffix for .txt, .xml and .gpx -->
+		<OutputFiles>Gps20120304_Chamonix_(Desert_blanc)</OutputFiles>
+		<FlgOutputXml>No</FlgOutputXml>
+		<FlgOutputRecords>Yes</FlgOutputRecords>
+	</Trace>
+
+	<Trace name="Chamonix (Balade du Paradis)" >
+		<!-- Informations for <metadata> tag -->
+		<Author>crudel</Author>
+		<Description>Chamonix</Description>
+
+		<TrackpointName>Randonn&amp;eacute;e</TrackpointName>
+
+		<!-- Name with suffix -->
+		<InputFileName>Gps20120304_Chamonix.20120228</InputFileName>
+
+		<!-- Local time -->
+		<StartDate>2012/02/28 14:00:00</StartDate>
+		<EndDate>  2012/02/28 15:40:00</EndDate>
+		<!-- No Duration because EndDate YYYY/MM/DD HH:MM:SS-->
+		<!-- Duration>2:15</Duration -->
+
+		<!-- Name without suffix for .txt, .xml and .gpx -->
+		<OutputFiles>Gps20120304_Chamonix_(Balade_du_Paradis)</OutputFiles>
+		<FlgOutputXml>No</FlgOutputXml>
+		<FlgOutputRecords>Yes</FlgOutputRecords>
+	</Trace>
+
+	<Trace name="Chamonix (Le Bois d Orthaz)" >
+		<!-- Informations for <metadata> tag -->
+		<Author>crudel</Author>
+		<Description>Chamonix</Description>
+
+		<TrackpointName>Randonn&amp;eacute;e</TrackpointName>
+
+		<!-- Name with suffix -->
+		<InputFileName>Gps20120304_Chamonix.20120303</InputFileName>
+
+		<!-- Local time -->
+		<StartDate>2012/03/03 10:58:00</StartDate>
+		<EndDate>  2012/03/03 12:30:00</EndDate>
+		<!-- No Duration because EndDate YYYY/MM/DD HH:MM:SS-->
+		<!-- Duration>2:15</Duration -->
+
+		<Smooth>
+			<StartTime>11:37:00</StartTime>
+			<EndTime>  11:43:00</EndTime>		
+		</Smooth>
+
+		<Waypoint>
+			<Name>Pause</Name>
+			<Description> </Description>
+			<Time>11:39:00</Time>
+		</Waypoint>
+
+		<!-- Name without suffix for .txt, .xml and .gpx -->
+		<OutputFiles>Gps20120304_Chamonix_(Le_Bois_d_Orthaz)</OutputFiles>
+		<FlgOutputXml>No</FlgOutputXml>
+		<FlgOutputRecords>Yes</FlgOutputRecords>
+	</Trace>
+
+	<Trace name="Beauvais (Split)" >
+		<!-- Name with suffix -->
+		<InputFileName>Gps20120416_Beauvais.key</InputFileName>
+
+		<!-- Name without suffix for .txt, .xml and .gpx -->
+		<OutputFiles>Gps20120416_Beauvais</OutputFiles>
+		<FlgSplit>Yes</FlgSplit>
+	</Trace>
+
+	<Trace name="Beauvais (Aller)" >
+		<!-- Informations for <metadata> tag -->
+		<Author>crudel</Author>
+		<Description>Beauvais</Description>
+
+		<TrackpointName>Routee</TrackpointName>
+
+		<!-- Name with suffix -->
+		<InputFileName>Gps20120416_Beauvais.20120414</InputFileName>
+
+		<!-- Local time -->
+		<StartDate>2012/04/14 09:00:00</StartDate>
+		<EndDate>  2012/04/14 12:00:00</EndDate>
+		<!-- No Duration because EndDate YYYY/MM/DD HH:MM:SS-->
+		<!-- Duration>2:15</Duration -->
+
+		<!-- Name without suffix for .txt, .xml and .gpx -->
+		<OutputFiles>Gps20120416_Beauvais_(Aller)</OutputFiles>
+		<FlgOutputXml>No</FlgOutputXml>
+		<FlgOutputRecords>Yes</FlgOutputRecords>
+	</Trace>
+
+	<Trace name="Beauvais (La Colline St Helene)" >
+		<!-- Informations for <metadata> tag -->
+		<Author>crudel</Author>
+		<Description>Beauvais</Description>
+
+		<TrackpointName>Randonn&amp;eacute;e</TrackpointName>
+
+		<!-- Name with suffix -->
+		<InputFileName>Gps20120416_Beauvais.20120414</InputFileName>
+
+		<!-- Local time -->
+		<StartDate>2012/04/14 15:00:00</StartDate>
+		<EndDate>  2012/04/14 18:00:00</EndDate>
+		<!-- No Duration because EndDate YYYY/MM/DD HH:MM:SS-->
+		<!-- Duration>2:15</Duration -->
+
+		<!-- Name without suffix for .txt, .xml and .gpx -->
+		<OutputFiles>Gps20120416_Beauvais_(La Colline_Sainte_Helene)</OutputFiles>
+		<FlgOutputXml>No</FlgOutputXml>
+		<FlgOutputRecords>Yes</FlgOutputRecords>
+	</Trace>
+
+	<Trace name="Chatou (Split)" >
+		<!-- Name with suffix -->
+		<InputFileName>Gps20120421_Chatou.key</InputFileName>
+
+		<!-- Name without suffix for .txt, .xml and .gpx -->
+		<OutputFiles>Gps20120421_Chatou</OutputFiles>
+		<FlgSplit>Yes</FlgSplit>
+	</Trace>
+
+	<Trace name="Chatou (Ile des Impressionnistes)" >
+		<!-- Informations for <metadata> tag -->
+		<Author>crudel</Author>
+		<Description>Chatou</Description>
+
+		<TrackpointName>Randonn&amp;eacute;e (1i&amp;egrave;re partie)</TrackpointName>
+
+		<!-- Name with suffix -->
+		<InputFileName>Gps20120421_Chatou.20120421</InputFileName>
+
+		<!-- Local time -->
+		<StartDate>2012/04/21 12:16:00</StartDate>
+		<EndDate>  2012/04/21 15:00:00</EndDate>
+		<!-- No Duration because EndDate YYYY/MM/DD HH:MM:SS-->
+		<!-- Duration>2:15</Duration -->
+
+		<Cut>
+			<Description>Randonn&amp;eacute;e (2i&amp;egrave;me partie)</Description>
+			<StartTime>13:29:00</StartTime>
+			<EndTime>  13:56:00</EndTime>		
+		</Cut>
+
+		<!-- Name without suffix for .txt, .xml and .gpx -->
+		<OutputFiles>Gps20120421_Chatou_(Ile_des_Impressionnistes)</OutputFiles>
+		<FlgOutputXml>No</FlgOutputXml>
+		<FlgOutputRecords>Yes</FlgOutputRecords>
+	</Trace>
+
+	<Trace name="Le Mesnil St Denis (Split)" >
+		<!-- Name with suffix -->
+		<InputFileName>Gps20120701.key</InputFileName>
+
+		<!-- Name without suffix for .txt, .xml and .gpx -->
+		<OutputFiles>Gps20120701_Le_Mesnil</OutputFiles>
+		<FlgSplit>Yes</FlgSplit>
+	</Trace>
+
+	<Trace name="Le Mesnil St Denis (Foret)" >
+		<!-- Informations for <metadata> tag -->
+		<Author>crudel</Author>
+		<Description>Le Mesnil St Denis</Description>
+
+		<TrackpointName>Randonn&amp;eacute;e</TrackpointName>
+
+		<!-- Name with suffix -->
+		<InputFileName>Gps20120701_Le_Mesnil.20120701</InputFileName>
+
+		<!-- Local time -->
+		<StartDate>2012/07/01 07:42:00</StartDate>
+		<EndDate>  2012/07/01 11:20:00</EndDate>
+		<!-- No Duration because EndDate YYYY/MM/DD HH:MM:SS-->
+		<!-- Duration>2:15</Duration -->
+
+		<Smooth>
+			<StartTime>09:15:00</StartTime>
+			<EndTime>  09:30:00</EndTime>		
+		</Smooth>
+
+		<Waypoint>
+			<Name>Pause</Name>
+			<Description>Pause...</Description>
+			<Time>09:20:00</Time>
+		</Waypoint>
+
+		<!-- Name without suffix for .txt, .xml and .gpx -->
+		<OutputFiles>Gps20120701_Le_Mesnil.20120701_(Foret)</OutputFiles>
+		<FlgOutputXml>No</FlgOutputXml>
+		<FlgOutputRecords>Yes</FlgOutputRecords>
+	</Trace>
+
+	<Trace name="Marly (Split)" >
+		<!-- Name with suffix -->
+		<InputFileName>Gps20120429_Marly.key</InputFileName>
+
+		<!-- Name without suffix for .txt, .xml and .gpx -->
+		<OutputFiles>Gps20120429_Marly</OutputFiles>
+		<FlgSplit>Yes</FlgSplit>
+	</Trace>
+
+	<Trace name="Marly (Foret)" >
+		<!-- Informations for <metadata> tag -->
+		<Author>crudel</Author>
+		<Description>Foret de Marly</Description>
+
+		<TrackpointName>Randonn&amp;eacute;e</TrackpointName>
+
+		<!-- Name with suffix -->
+		<InputFileName>Gps20120429_Marly.20120429</InputFileName>
+
+		<!-- Local time -->
+		<StartDate>2012/04/29 08:03:00</StartDate>
+		<EndDate>  2012/04/29 11:15:00</EndDate>
+		<!-- No Duration because EndDate YYYY/MM/DD HH:MM:SS-->
+		<!-- Duration>2:15</Duration -->
+
+		<!-- Name without suffix for .txt, .xml and .gpx -->
+		<OutputFiles>Gps20120429_Marly_(Foret)</OutputFiles>
+		<FlgOutputXml>No</FlgOutputXml>
+		<FlgOutputRecords>Yes</FlgOutputRecords>
+	</Trace>
+
+	<Trace name="logging-3 (Split)" >
+		<!-- Name with suffix -->
+		<InputFileName>logging-3.txt</InputFileName>
+
+		<!-- Name without suffix for .txt, .xml and .gpx -->
+		<OutputFiles>logging-3</OutputFiles>
+		<FlgSplit>Yes</FlgSplit>
+	</Trace>
+
+	<Trace name="Corte" >
+		<!-- Informations for <metadata> tag -->
+		<Author>Claudius</Author>
+		<Description>Corte</Description>
+
+		<TrackpointName>Randonn&amp;eacute;e</TrackpointName>
+
+		<!-- Name with suffix -->
+		<InputFileName>logging-3.20120805</InputFileName>
+
+		<!-- Local time -->
+		<StartDate>2012/08/05 08:00:00</StartDate>
+		<EndDate>  2012/08/05 22:00:00</EndDate>
+		<!-- No Duration because EndDate YYYY/MM/DD HH:MM:SS-->
+		<!-- Duration>2:15</Duration -->
+
+		<!-- Name without suffix for .txt, .xml and .gpx -->
+		<OutputFiles>Corte</OutputFiles>
+		<FlgOutputXml>No</FlgOutputXml>
+		<FlgOutputRecords>Yes</FlgOutputRecords>
+	</Trace>
+
+	<Trace name="Lac Melo et Restonica" >
+		<!-- Informations for <metadata> tag -->
+		<Author>Claudius</Author>
+		<Description>Lac Melo et Restonica</Description>
+
+		<TrackpointName>Randonn&amp;eacute;e</TrackpointName>
+
+		<!-- Name with suffix -->
+		<InputFileName>logging-3.20120806</InputFileName>
+
+		<!-- Local time -->
+		<StartDate>2012/08/06 08:40:00</StartDate>
+		<EndDate>  2012/08/06 16:00:00</EndDate>
+		<!-- No Duration because EndDate YYYY/MM/DD HH:MM:SS-->
+		<!-- Duration>2:15</Duration -->
+
+		<Cut>
+			<Description>Lac de M&amp;eacute;lo (Retour)</Description>
+			<StartTime>12:25:00</StartTime>
+			<EndTime>  12:30:00</EndTime>		
+		</Cut>
+
+		<Cut>
+			<Description>Lac de M&amp;eacute;lo (Retour voiture)</Description>
+			<StartTime>14:33:00</StartTime>
+			<EndTime>  14:35:00</EndTime>		
+		</Cut>
+
+		<!-- Name without suffix for .txt, .xml and .gpx -->
+		<OutputFiles>Restonica</OutputFiles>
+		<FlgOutputXml>No</FlgOutputXml>
+		<FlgOutputRecords>Yes</FlgOutputRecords>
+	</Trace>
+
+	<Trace name="Ploubalay (Split)" >
+		<!-- Name with suffix -->
+		<InputFileName>loggin-201211-1.txt</InputFileName>
+
+		<!-- Name without suffix for .txt, .xml and .gpx -->
+		<OutputFiles>Gps201211_Ploubalay_1</OutputFiles>
+		<FlgSplit>Yes</FlgSplit>
+	</Trace>
+
+	<Trace name="Ploubalay (2012/11/03)" >
+		<!-- Informations for <metadata> tag -->
+		<Author>Claudius</Author>
+		<Description>Ploubalay</Description>
+
+		<TrackpointName>Randonn&amp;eacute;e</TrackpointName>
+
+		<!-- Name with suffix -->
+		<InputFileName>Gps201211_Ploubalay_1.20121103</InputFileName>
+
+		<!-- Local time -->
+		<StartDate>2012/11/03 11:54:45</StartDate>
+		<EndDate>  2012/11/03 13:41:00</EndDate>
+		<!-- No Duration because EndDate YYYY/MM/DD HH:MM:SS-->
+		<!-- Duration>2:15</Duration -->
+
+		<!-- Name without suffix for .txt, .xml and .gpx -->
+		<OutputFiles>Ploubalay_20121103</OutputFiles>
+		<FlgOutputXml>No</FlgOutputXml>
+		<FlgOutputRecords>Yes</FlgOutputRecords>
+	</Trace>
+
+	<Trace name="Ploubalay (2012/11/04)" >
+		<!-- Informations for <metadata> tag -->
+		<Author>Claudius</Author>
+		<Description>Ploubalay</Description>
+
+		<TrackpointName>Randonn&amp;eacute;e</TrackpointName>
+
+		<!-- Name with suffix -->
+		<InputFileName>Gps201211_Ploubalay_1.20121104</InputFileName>
+
+		<!-- Local time -->
+		<StartDate>2012/11/04 12:54:00</StartDate>
+		<EndDate>  2012/11/04 13:41:00</EndDate>
+		<!-- No Duration because EndDate YYYY/MM/DD HH:MM:SS-->
+		<!-- Duration>2:15</Duration -->
+
+		<!-- Name without suffix for .txt, .xml and .gpx -->
+		<OutputFiles>Ploubalay_20121104</OutputFiles>
+		<FlgOutputXml>No</FlgOutputXml>
+		<FlgOutputRecords>Yes</FlgOutputRecords>
+	</Trace>
+
+	<Trace name="Le Perray En Yvelines (Split)" >
+		<!-- Name with suffix -->
+		<InputFileName>Gps20130331LePerrayenYvelines.key</InputFileName>
+
+		<!-- Name without suffix for .txt, .xml and .gpx -->
+		<OutputFiles>Gps20130331LePerrayenYvelines</OutputFiles>
+		<FlgSplit>Yes</FlgSplit>
+	</Trace>
+
+	<Trace name="Le Perray En Yvelines" >
+		<!-- Informations for <metadata> tag -->
+		<Author>Claudius</Author>
+		<Description>Le Perray En Yvelines</Description>
+
+		<TrackpointName>Randonn&amp;eacute;e</TrackpointName>
+
+		<!-- Name with suffix -->
+		<InputFileName>Gps20130331LePerrayenYvelines.20130331</InputFileName>
+
+		<!-- Local time -->
+		<StartDate>2013/03/31 08:00:00</StartDate>
+		<EndDate>  2013/03/31 10:40:00</EndDate>
+		<!-- No Duration because EndDate YYYY/MM/DD HH:MM:SS-->
+		<!-- Duration>2:15</Duration -->
+
+		<!-- Name without suffix for .txt, .xml and .gpx -->
+		<OutputFiles>Le-Perray-en-Yvelines</OutputFiles>
+		<FlgOutputXml>No</FlgOutputXml>
+		<FlgOutputRecords>Yes</FlgOutputRecords>
+	</Trace>
+
+	<Trace name="Les Alluets (Split)" >
+		<!-- Name with suffix -->
+		<InputFileName>Gps20130407LesAlluets.key</InputFileName>
+
+		<!-- Name without suffix for .txt, .xml and .gpx -->
+		<OutputFiles>Gps20130407LesAlluets</OutputFiles>
+		<FlgSplit>Yes</FlgSplit>
+	</Trace>
+
+	<Trace name="Les Alluets" >
+		<!-- Informations for <metadata> tag -->
+		<Author>Claudius</Author>
+		<Description>Les Alluets</Description>
+
+		<TrackpointName>Randonn&amp;eacute;e</TrackpointName>
+
+		<!-- Name with suffix -->
+		<InputFileName>Gps20130407LesAlluets.20130407</InputFileName>
+
+		<!-- Local time (HH:MM:SS pour (HH+1):MM:SS ;-) -->
+		<StartDate>2013/04/07 08:04:00</StartDate>
+		<EndDate>  2013/04/07 11:17:00</EndDate>
+		<!-- No Duration because EndDate YYYY/MM/DD HH:MM:SS-->
+		<!-- Duration>2:15</Duration -->
+
+		<Smooth>
+			<StartTime>09:42:00</StartTime>
+			<EndTime>  09:55:00</EndTime>		
+		</Smooth>
+
+		<Waypoint>
+			<Name>Pause</Name>
+			<Description> </Description>
+			<Time>09:49:00</Time>
+		</Waypoint>
+
+		<!-- Name without suffix for .txt, .xml and .gpx -->
+		<OutputFiles>Les-Alluets</OutputFiles>
+		<FlgOutputXml>No</FlgOutputXml>
+		<FlgOutputRecords>Yes</FlgOutputRecords>
+	</Trace>
+
+	<Trace name="Le Conquet 2 (Split)" >
+		<!-- Name with suffix -->
+		<InputFileName>LeConquet-2.key</InputFileName>
+
+		<!-- Name without suffix for .txt, .xml and .gpx -->
+		<OutputFiles>LeConquet-2</OutputFiles>
+		<FlgSplit>Yes</FlgSplit>
+	</Trace>
+
+	<Trace name="Le Conquet 1" >
+		<!-- Informations for <metadata> tag -->
+		<Author>Claudius</Author>
+		<Description>LeConquet-1</Description>
+
+		<TrackpointName>LeConquet-1</TrackpointName>
+
+		<!-- Name with suffix -->
+		<InputFileName>LeConquet-1.20130812</InputFileName>
+
+		<!-- Local time -->
+		<StartDate>2013/08/12 06:00:00</StartDate>
+		<EndDate>  2013/08/12 18:59:59</EndDate>
+		<!-- No Duration because EndDate YYYY/MM/DD HH:MM:SS-->
+		<!-- Duration>2:15</Duration -->
+
+		<!-- Name without suffix for .txt, .xml and .gpx -->
+		<OutputFiles>LeConquet-1</OutputFiles>
+		<FlgOutputXml>No</FlgOutputXml>
+		<FlgOutputRecords>Yes</FlgOutputRecords>
+	</Trace>
+
+	<Trace name="Le Conquet 2" >
+		<!-- Informations for <metadata> tag -->
+		<Author>Claudius</Author>
+		<Description>LeConquet-2</Description>
+
+		<TrackpointName>LeConquet-2</TrackpointName>
+
+		<!-- Name with suffix -->
+		<InputFileName>LeConquet-2.20130814</InputFileName>
+
+		<!-- Local time -->
+		<StartDate>2013/08/14 06:00:00</StartDate>
+		<EndDate>  2013/08/14 18:59:59</EndDate>
+		<!-- No Duration because EndDate YYYY/MM/DD HH:MM:SS-->
+		<!-- Duration>2:15</Duration -->
+
+		<!-- Name without suffix for .txt, .xml and .gpx -->
+		<OutputFiles>LeConquet-2</OutputFiles>
+		<FlgOutputXml>No</FlgOutputXml>
+		<FlgOutputRecords>Yes</FlgOutputRecords>
+	</Trace>
+
+	<Trace name="Hargeville (Split)" >
+		<!-- Name with suffix -->
+		<InputFileName>Gps20130922_Hargeville.key.txt</InputFileName>
+
+		<!-- Name without suffix for .txt, .xml and .gpx -->
+		<OutputFiles>Hargeville</OutputFiles>
+		<FlgSplit>Yes</FlgSplit>
+	</Trace>
+
+	<Trace name="Hargeville" >
+		<!-- Informations for <metadata> tag -->
+		<Author>Claudius</Author>
+		<Description>LeConquet-1</Description>
+
+		<TrackpointName>Hargeville</TrackpointName>
+
+		<!-- Name with suffix -->
+		<InputFileName>Hargeville.20130922</InputFileName>
+
+		<!-- Local time -->
+		<StartDate>2013/09/22 06:00:00</StartDate>
+		<EndDate>  2013/09/22 14:59:59</EndDate>
+		<!-- No Duration because EndDate YYYY/MM/DD HH:MM:SS-->
+		<!-- Duration>2:15</Duration -->
+
+		<!-- Name without suffix for .txt, .xml and .gpx -->
+		<OutputFiles>Hargeville</OutputFiles>
+		<FlgOutputXml>No</FlgOutputXml>
+		<FlgOutputRecords>Yes</FlgOutputRecords>
+	</Trace>
+
+	<Trace name="Le Conquet 2" >
+		<!-- Informations for <metadata> tag -->
+		<Author>Claudius</Author>
+		<Description>LeConquet-2</Description>
+
+		<TrackpointName>LeConquet-2</TrackpointName>
+
+		<!-- Name with suffix -->
+		<InputFileName>LeConquet-2.20130814</InputFileName>
+
+		<!-- Local time -->
+		<StartDate>2013/08/14 09:00:33</StartDate>
+		<EndDate>  2013/08/14 18:59:59</EndDate>
+		<!-- No Duration because EndDate YYYY/MM/DD HH:MM:SS-->
+		<!-- Duration>2:15</Duration -->
+
+		<!-- Name without suffix for .txt, .xml and .gpx -->
+		<OutputFiles>LeConquet-2</OutputFiles>
+		<FlgOutputXml>No</FlgOutputXml>
+		<FlgOutputRecords>Yes</FlgOutputRecords>
+	</Trace>
+
+	<Trace name="Saint-Remy-Honore (Split)" >
+		<!-- Name with suffix -->
+		<InputFileName>Gps20141201StRemyLHonore.key</InputFileName>
+
+		<!-- Name without suffix for .txt, .xml and .gpx -->
+		<OutputFiles>Gps20141201StRemyLHonore</OutputFiles>
+		<FlgSplit>Yes</FlgSplit>
+	</Trace>
+
+	<Trace name="Saint-Remy-Honore" >
+		<!-- Informations for <metadata> tag -->
+		<Author>Claudius</Author>
+		<Description>Saint-Remy-l'Honore</Description>
+
+		<TrackpointName>Randonn&amp;eacute;e</TrackpointName>
+
+		<!-- Name with suffix -->
+		<InputFileName>Gps20141201StRemyLHonore.20140112</InputFileName>
+
+		<!-- Local time (HH:MM:SS pour (HH+1):MM:SS ;-) -->
+		<StartDate>2014/01/12 09:00:33</StartDate>
+		<EndDate>  2014/01/12 12:30:00</EndDate>
+		<!-- No Duration because EndDate YYYY/MM/DD HH:MM:SS-->
+		<!-- Duration>2:15</Duration -->
+
+		<!-- Name without suffix for .txt, .xml and .gpx -->
+		<OutputFiles>St-Remy-LHonore</OutputFiles>
+		<FlgOutputXml>No</FlgOutputXml>
+		<FlgOutputRecords>Yes</FlgOutputRecords>
+	</Trace>
+
+	<Trace name="Villiers-Le-Mahieu (Split)" >
+		<!-- Name with suffix -->
+		<InputFileName>Gps20140119-VilliersLeMahieu.key</InputFileName>
+
+		<!-- Name without suffix for .txt, .xml and .gpx -->
+		<OutputFiles>Gps20140119-VilliersLeMahieu</OutputFiles>
+		<FlgSplit>Yes</FlgSplit>
+	</Trace>
+
+	<Trace name="Villiers-Le-Mahieu" >
+		<!-- Informations for <metadata> tag -->
+		<Author>Claudius</Author>
+		<Description>Villiers-Le-Mahieu</Description>
+
+		<TrackpointName>Randonn&amp;eacute;e</TrackpointName>
+
+		<!-- Name with suffix -->
+		<InputFileName>Gps20140119-VilliersLeMahieu.20140119</InputFileName>
+
+		<!-- Local time (HH:MM:SS pour (HH+1):MM:SS ;-) -->
+		<StartDate>2014/01/19 08:30:00</StartDate>
+		<EndDate>  2014/01/19 14:30:00</EndDate>
+		<!-- No Duration because EndDate YYYY/MM/DD HH:MM:SS-->
+		<!-- Duration>2:15</Duration -->
+
+		<!-- Name without suffix for .txt, .xml and .gpx -->
+		<OutputFiles>Villiers-Le-Mahieu</OutputFiles>
+		<FlgOutputXml>No</FlgOutputXml>
+		<FlgOutputRecords>Yes</FlgOutputRecords>
+
+		<Waypoint>
+			<Name>Pause à mi-parcours</Name>
+			<Description> </Description>
+			<Time>10:30:00</Time>
+		</Waypoint>
+
+	</Trace>
+
+	<Trace name="Les Mesnuls (Split)" >
+		<!-- Name with suffix -->
+		<InputFileName>Gps20140202LesMesnuls.txt</InputFileName>
+
+		<!-- Name without suffix for .txt, .xml and .gpx -->
+		<OutputFiles>Gps20140202LesMesnuls</OutputFiles>
+		<FlgSplit>Yes</FlgSplit>
+	</Trace>
+
+	<Trace name="Les Mesnuls" >
+		<!-- Informations for <metadata> tag -->
+		<Author>Claudius</Author>
+		<Description>Les Mesnuls</Description>
+
+		<TrackpointName>Randonn&amp;eacute;e</TrackpointName>
+
+		<!-- Name with suffix -->
+		<InputFileName>Gps20140202LesMesnuls.20140202</InputFileName>
+
+		<!-- Local time (HH:MM:SS pour (HH+1):MM:SS ;-) -->
+		<StartDate>2014/02/02 08:30:00</StartDate>
+		<EndDate>  2014/02/02 14:30:00</EndDate>
+		<!-- No Duration because EndDate YYYY/MM/DD HH:MM:SS-->
+		<!-- Duration>2:15</Duration -->
+
+		<!-- Name without suffix for .txt, .xml and .gpx -->
+		<OutputFiles>Les-Mesnuls</OutputFiles>
+		<FlgOutputXml>No</FlgOutputXml>
+		<FlgOutputRecords>Yes</FlgOutputRecords>
+
+		<Waypoint>
+			<Name>Pause à mi-parcours</Name>
+			<Description> </Description>
+			<Time>10:21:51</Time>
+		</Waypoint>
+
+	</Trace>
+
+	<Trace name="Saint Cucufa (Split)" >
+		<!-- Name with suffix -->
+		<InputFileName>Gps20140216StCucufa.txt</InputFileName>
+
+		<!-- Name without suffix for .txt, .xml and .gpx -->
+		<OutputFiles>Gps20140216StCucufa</OutputFiles>
+		<FlgSplit>Yes</FlgSplit>
+	</Trace>
+
+	<Trace name="Saint Cucufa">
+		<!-- Informations for <metadata> tag -->
+		<Author>Claudius</Author>
+		<Description>Saint Cucufa</Description>
+
+		<TrackpointName>Randonn&amp;eacute;e</TrackpointName>
+
+		<!-- Name with suffix -->
+		<InputFileName>Gps20140216StCucufa.20140216</InputFileName>
+
+		<!-- Local time (HH:MM:SS pour (HH+1):MM:SS ;-) -->
+		<StartDate>2014/02/16 08:30:00</StartDate>
+		<EndDate>  2014/02/16 14:30:00</EndDate>
+		<!-- No Duration because EndDate YYYY/MM/DD HH:MM:SS-->
+		<!-- Duration>2:15</Duration -->
+
+		<!-- Name without suffix for .txt, .xml and .gpx -->
+		<OutputFiles>St-Cucufa</OutputFiles>
+		<FlgOutputXml>No</FlgOutputXml>
+		<FlgOutputRecords>Yes</FlgOutputRecords>
+
+		<Smooth>
+			<StartTime>10:44:00</StartTime>
+			<EndTime>  10:57:00</EndTime>		
+		</Smooth>
+
+		<Waypoint>
+			<Name>Pause à mi-parcours</Name>
+			<Description> </Description>
+			<Time>10:47:00</Time>
+		</Waypoint>
+
+	</Trace>
+
+	<Trace name="Flexanville (Split)" >
+		<!-- Name with suffix -->
+		<InputFileName>Gps20140302-Flexanville.key</InputFileName>
+
+		<!-- Name without suffix for .txt, .xml and .gpx -->
+		<OutputFiles>Gps20140302-Flexanville</OutputFiles>
+		<FlgSplit>Yes</FlgSplit>
+	</Trace>
+
+	<Trace name="Flexanville">
+		<!-- Informations for <metadata> tag -->
+		<Author>Claudius</Author>
+		<Description>Flexanville</Description>
+
+		<TrackpointName>Randonn&amp;eacute;e</TrackpointName>
+
+		<!-- Name with suffix -->
+		<InputFileName>Gps20140302-Flexanville.20140302</InputFileName>
+
+		<!-- Local time (HH:MM:SS pour (HH+1):MM:SS ;-) -->
+		<StartDate>2014/03/02 09:17:00</StartDate>
+		<EndDate>  2014/03/02 14:30:00</EndDate>
+		<!-- No Duration because EndDate YYYY/MM/DD HH:MM:SS-->
+		<!-- Duration>2:15</Duration -->
+
+		<!-- Name without suffix for .txt, .xml and .gpx -->
+		<OutputFiles>Flexanville</OutputFiles>
+		<FlgOutputXml>No</FlgOutputXml>
+		<FlgOutputRecords>Yes</FlgOutputRecords>
+
+		<Waypoint>
+			<Name>Pause à mi-parcours</Name>
+			<Description> </Description>
+			<Time>11:04:00</Time>
+		</Waypoint>
+
+	</Trace>
+
+	<Trace name="La Celle-Les-Bordes (Split)" >
+		<!-- Name with suffix -->
+		<InputFileName>LOGGING-2014-04-XX.TXT</InputFileName>
+
+		<!-- Name without suffix for .txt, .xml and .gpx -->
+		<OutputFiles>Gps2014-Unknown</OutputFiles>
+		<FlgSplit>Yes</FlgSplit>
+	</Trace>
+
+	<Trace name="La Celle-Les-Bordes">
+		<!-- Informations for <metadata> tag -->
+		<Author>Claudius</Author>
+		<Description>La Celle-Les-Bordes</Description>
+
+		<TrackpointName>Randonn&amp;eacute;e</TrackpointName>
+
+		<!-- Name with suffix -->
+		<InputFileName>Gps2014-Unknown.20140406</InputFileName>
+
+		<!-- Local time (HH:MM:SS pour (HH+1):MM:SS ;-) -->
+		<StartDate>2014/04/06 07:00:00</StartDate>
+		<EndDate>  2014/04/06 14:30:00</EndDate>
+		<!-- No Duration because EndDate YYYY/MM/DD HH:MM:SS-->
+		<!-- Duration>2:15</Duration -->
+
+		<!-- Name without suffix for .txt, .xml and .gpx -->
+		<OutputFiles>La_Celle-Les-Bordes</OutputFiles>
+		<FlgOutputXml>No</FlgOutputXml>
+		<FlgOutputRecords>Yes</FlgOutputRecords>
+
+		<Waypoint>
+			<Name>Pause à mi-parcours</Name>
+			<Description> </Description>
+			<Time>09:54:00</Time>
+		</Waypoint>
+
+	</Trace>
+
+	<Trace name="Rambouillet (Split)" >
+		<!-- Name with suffix -->
+		<InputFileName>Gps20140420_Rambouillet.txt</InputFileName>
+
+		<!-- Name without suffix for .txt, .xml and .gpx -->
+		<OutputFiles>Gps20140420_Rambouillet</OutputFiles>
+		<FlgSplit>Yes</FlgSplit>
+	</Trace>
+
+	<Trace name="Rambouillet">
+		<!-- Informations for <metadata> tag -->
+		<Author>Claudius</Author>
+		<Description>Rambouillet</Description>
+
+		<TrackpointName>Randonn&amp;eacute;e</TrackpointName>
+
+		<!-- Name with suffix -->
+		<InputFileName>Gps20140420_Rambouillet.20140420</InputFileName>
+
+		<!-- Local time (HH:MM:SS pour (HH+1):MM:SS ;-) -->
+		<StartDate>2014/04/20 07:00:00</StartDate>
+		<EndDate>  2014/04/20 14:30:00</EndDate>
+		<!-- No Duration because EndDate YYYY/MM/DD HH:MM:SS-->
+		<!-- Duration>2:15</Duration -->
+
+		<!-- Name without suffix for .txt, .xml and .gpx -->
+		<OutputFiles>Gps20140420_Rambouillet</OutputFiles>
+		<FlgOutputXml>No</FlgOutputXml>
+		<FlgOutputRecords>Yes</FlgOutputRecords>
+
+		<Waypoint>
+			<Name>Pause à mi-parcours</Name>
+			<Description> </Description>
+			<Time>09:41:00</Time>
+		</Waypoint>
+	</Trace>
+
+	<Trace name="Villiers-le-Bacle (Split)" >
+		<!-- Name with suffix -->
+		<InputFileName>Gps20140504_Villiers-le-Bacle.txt</InputFileName>
+
+		<!-- Name without suffix for .txt, .xml and .gpx -->
+		<OutputFiles>Gps20140504_Villiers-le-Bacle</OutputFiles>
+		<FlgSplit>Yes</FlgSplit>
+	</Trace>
+
+	<Trace name="Villiers-le-Bacle">
+		<!-- Informations for <metadata> tag -->
+		<Author>Claudius</Author>
+		<Description>Villiers-le-Bacle</Description>
+
+		<TrackpointName>Randonn&amp;eacute;e</TrackpointName>
+
+		<!-- Name with suffix -->
+		<InputFileName>Gps20140504_Villiers-le-Bacle.20140504</InputFileName>
+
+		<!-- Local time (HH:MM:SS pour (HH+1):MM:SS ;-) -->
+		<StartDate>2014/05/04 07:00:00</StartDate>
+		<EndDate>  2014/05/04 14:30:00</EndDate>
+		<!-- No Duration because EndDate YYYY/MM/DD HH:MM:SS-->
+		<!-- Duration>2:15</Duration -->
+
+		<!-- Name without suffix for .txt, .xml and .gpx -->
+		<OutputFiles>Gps20140504_Villiers-le-Bacle</OutputFiles>
+		<FlgOutputXml>No</FlgOutputXml>
+		<FlgOutputRecords>Yes</FlgOutputRecords>
+
+		<Waypoint>
+			<Name>Pause à mi-parcours</Name>
+			<Description> </Description>
+			<Time>10:09:00</Time>
+		</Waypoint>
+	</Trace>
+
+	<Trace name="Sonchamp" >
+		<!-- Informations for <metadata> tag -->
+		<Author>Claudius</Author>
+		<Description>Sonchamp</Description>
+
+		<TrackpointName>Sonchamp</TrackpointName>
+
+		<!-- Name with suffix -->
+		<InputFileName>WE-2014-06-15.20140614</InputFileName>
+
+		<!-- Local time -->
+		<StartDate>2014/06/14 12:15:00</StartDate>
+		<EndDate>  2014/06/14 19:00:00</EndDate>
+		<!-- No Duration because EndDate YYYY/MM/DD HH:MM:SS-->
+		<!-- Duration>2:15</Duration -->
+
+		<!-- Name without suffix for .txt, .xml and .gpx -->
+		<OutputFiles>Sonchamp</OutputFiles>
+		<FlgOutputXml>No</FlgOutputXml>
+		<FlgOutputRecords>Yes</FlgOutputRecords>
+
+		<Smooth>
+			<StartTime>14:30:00</StartTime>
+			<EndTime>  15:15:00</EndTime>		
+		</Smooth>
+
+		<Waypoint>
+			<Name>Pause à mi-parcours</Name>
+			<Description>Pause</Description>
+			<Time>14:00:00</Time>
+		</Waypoint>
+	</Trace>
+
+	<Trace name="Beynes" >
+		<!-- Informations for <metadata> tag -->
+		<Author>Claudius</Author>
+		<Description>Beynes</Description>
+
+		<TrackpointName>Beynes</TrackpointName>
+
+		<!-- Name with suffix -->
+		<InputFileName>WE-2014-06-15.20140615</InputFileName>
+
+		<!-- Local time -->
+		<StartDate>2014/06/15 07:00:00</StartDate>
+		<EndDate>  2014/06/15 14:00:00</EndDate>
+		<!-- No Duration because EndDate YYYY/MM/DD HH:MM:SS-->
+		<!-- Duration>2:15</Duration -->
+
+		<!-- Name without suffix for .txt, .xml and .gpx -->
+		<OutputFiles>Beynes</OutputFiles>
+		<FlgOutputXml>No</FlgOutputXml>
+		<FlgOutputRecords>Yes</FlgOutputRecords>
+
+		<Waypoint>
+			<Name>Pause à mi-parcours</Name>
+			<Description>Pause</Description>
+			<Time>10:00:00</Time>
+		</Waypoint>
+	</Trace>
+
+	<Trace name="GpxWE2014-06-22 (Split)" >
+		<!-- Name with suffix -->
+		<InputFileName>GpxWE2014-06-22.txt</InputFileName>
+
+		<!-- Name without suffix for .txt, .xml and .gpx -->
+		<OutputFiles>GpxWE2014-06-22</OutputFiles>
+		<FlgSplit>Yes</FlgSplit>
+	</Trace>
+
+	<Trace name="Sonchamp-2" >
+		<!-- Informations for <metadata> tag -->
+		<Author>Claudius</Author>
+		<Description>Sonchamp</Description>
+
+		<TrackpointName>Sonchamp</TrackpointName>
+
+		<!-- Name with suffix -->
+		<InputFileName>GpxWE2014-06-22.20140621</InputFileName>
+
+		<!-- Local time -->
+		<StartDate>2014/06/21 10:48:00</StartDate>
+		<EndDate>  2014/06/21 19:00:00</EndDate>
+		<!-- No Duration because EndDate YYYY/MM/DD HH:MM:SS-->
+		<!-- Duration>2:15</Duration -->
+
+		<!-- Name without suffix for .txt, .xml and .gpx -->
+		<OutputFiles>Sonchamp</OutputFiles>
+		<FlgOutputXml>No</FlgOutputXml>
+		<FlgOutputRecords>Yes</FlgOutputRecords>
+
+		<Smooth>
+			<StartTime>12:55:00</StartTime>
+			<EndTime>  13:30:00</EndTime>		
+		</Smooth>
+
+		<Waypoint>
+			<Name>Chêne St Benoit</Name>
+			<Description>Pause</Description>
+			<Time>12:17:49</Time>
+		</Waypoint>
+
+		<Waypoint>
+			<Name>Pause à mi-parcours</Name>
+			<Description>Pause</Description>
+			<Time>13:10:00</Time>
+		</Waypoint>
+
+		<Waypoint>
+			<Name>Maison d'Elsa Triolet Aragon</Name>
+			<Description>Moulin de Villeneuve</Description>
+			<Lat>48.568319</Lat>
+			<Lon>1.926120</Lon>
+		</Waypoint>
+	</Trace>
+
+	<Trace name="Villennes-Sur-Seine (Split)" >
+		<!-- Name with suffix -->
+		<InputFileName>Gpx20140824-Villennes-Sur-Seine.txt</InputFileName>
+
+		<!-- Name without suffix for .txt, .xml and .gpx -->
+		<OutputFiles>Gpx20140824-Villennes-Sur-Seine</OutputFiles>
+		<FlgSplit>Yes</FlgSplit>
+	</Trace>
+
+	<Trace name="Villennes-Sur-Seine" >
+		<!-- Informations for <metadata> tag -->
+		<Author>Claudius</Author>
+		<Description>Villennes-Sur-Seine</Description>
+
+		<TrackpointName>Villennes-Sur-Seine</TrackpointName>
+
+		<!-- Name with suffix -->
+		<InputFileName>Gpx20140824-Villennes-Sur-Seine.20140824</InputFileName>
+
+		<!-- Local time -->
+		<StartDate>2014/08/24 10:15:00</StartDate>
+		<EndDate>  2014/08/24 18:00:00</EndDate>
+		<!-- No Duration because EndDate YYYY/MM/DD HH:MM:SS-->
+		<!-- Duration>2:15</Duration -->
+
+		<!-- Name without suffix for .txt, .xml and .gpx -->
+		<OutputFiles>Villennes-Sur-Seine</OutputFiles>
+		<FlgOutputXml>No</FlgOutputXml>
+		<FlgOutputRecords>Yes</FlgOutputRecords>
+
+		<Smooth>
+			<TopLeftCorner>
+				<Lat>48.95657</Lat>
+				<Lon>1.980790</Lon>
+			</TopLeftCorner>
+			<BottomRightCorner>
+				<Lat>48.95651</Lat>
+				<Lon>1.980960</Lon>
+			</BottomRightCorner>
+		</Smooth>
+
+		<Smooth>
+			<!-- Precision en metres (point centre sur un carre de 2 x Precision) -->
+			<Precision>3</Precision>
+			<From>
+				<Lat>48.95831</Lat>
+				<Lon>1.984360</Lon>
+			</From>
+			<To>
+				<Lat>48.95842</Lat>
+				<Lon>1.984570</Lon>
+			</To>
+		</Smooth>
+
+		<Smooth>
+			<!-- Precision en metres (point centre sur un carre de 2 x Precision) -->
+			<Precision>6</Precision>
+			<From>
+				<Lat>48.95961</Lat>
+				<Lon>1.987750</Lon>
+			</From>
+			<To>
+				<Lat>48.95960</Lat>
+				<Lon>1.987820</Lon>
+			</To>
+		</Smooth>
+
+		<Smooth>
+			<TopLeftCorner>
+				<Lat>48.96232</Lat>
+				<Lon>1.990520</Lon>
+			</TopLeftCorner>
+			<BottomRightCorner>
+				<Lat>48.96077</Lat>
+				<Lon>1.991450</Lon>
+			</BottomRightCorner>
+		</Smooth>
+
+		<Smooth>
+			<TopLeftCorner>
+				<Lat>48.97337</Lat>
+				<Lon>1.973400</Lon>
+			</TopLeftCorner>
+			<BottomRightCorner>
+				<Lat>48.95653</Lat>
+				<Lon>1.973630</Lon>
+			</BottomRightCorner>
+		</Smooth>
+
+		<Waypoint>
+			<Name>Pause à mi-parcours au pied d'un prunier abondant</Name>
+			<Description>Pause</Description>
+			<Lat>48.958380</Lat>
+			<Lon>1.984520</Lon>
+		</Waypoint>
+
+		<Waypoint>
+			<Name>Maison d'Émile Zola à Médan</Name>
+			<Description>Pause</Description>
+			<Lat>48.955620</Lat>
+			<Lon>1.995510</Lon>
+		</Waypoint>
+
+		<Waypoint>
+			<Name>Bac pour l'Ile du Platais</Name>
+			<Description>Pause</Description>
+			<Lat>48.948240</Lat>
+			<Lon>1.998460</Lon>
+		</Waypoint>
+
+	</Trace>
+
+	<Trace name="Maurepas (Split)" >
+		<!-- Name with suffix -->
+		<InputFileName>GpsRigolesMaurepas.txt</InputFileName>
+
+		<!-- Name without suffix for .txt, .xml and .gpx -->
+		<OutputFiles>GpsRigolesMaurepas</OutputFiles>
+		<FlgSplit>Yes</FlgSplit>
+	</Trace>
+
+	<Trace name="Maurepas" >
+		<!-- Informations for <metadata> tag -->
+		<Author>Claudius</Author>
+		<Description>Maurepas</Description>
+
+		<TrackpointName>Maurepas</TrackpointName>
+
+		<!-- Name with suffix -->
+		<InputFileName>GpsRigolesMaurepas.20140907</InputFileName>
+
+		<!-- Local time -->
+		<StartDate>2014/09/07 07:44:00</StartDate>
+		<EndDate>  2014/09/07 11:20:00</EndDate>
+		<!-- No Duration because EndDate YYYY/MM/DD HH:MM:SS-->
+		<!-- Duration>2:15</Duration -->
+
+		<!-- Name without suffix for .txt, .xml and .gpx -->
+		<OutputFiles>Maurepas</OutputFiles>
+		<FlgOutputXml>No</FlgOutputXml>
+		<FlgOutputRecords>Yes</FlgOutputRecords>
+
+		<Waypoint>
+			<Name>Pause à mi-parcours</Name>
+			<Description>Pause</Description>
+			<Lat>48.779080</Lat>
+			<Lon>1.904960</Lon>
+		</Waypoint>
+	</Trace>
+
+	<Trace name="Septeuil (Split)" >
+		<!-- Name with suffix -->
+		<InputFileName>Gps20141005-Septeuil.txt</InputFileName>
+
+		<!-- Name without suffix for .txt, .xml and .gpx -->
+		<OutputFiles>Gps20141005-Septeuil</OutputFiles>
+		<FlgSplit>Yes</FlgSplit>
+	</Trace>
+
+	<Trace name="Septeuil" >
+		<!-- Informations for <metadata> tag -->
+		<Author>Claudius</Author>
+		<Description>Septeuil</Description>
+
+		<TrackpointName>Septeuil</TrackpointName>
+
+		<!-- Name with suffix -->
+		<InputFileName>Gps20141005-Septeuil.20141005</InputFileName>
+
+		<!-- Local time -->
+		<StartDate>2014/10/05 07:44:00</StartDate>
+		<EndDate>  2014/10/05 13:20:00</EndDate>
+		<!-- No Duration because EndDate YYYY/MM/DD HH:MM:SS-->
+		<!-- Duration>2:15</Duration -->
+
+		<!-- Name without suffix for .txt, .xml and .gpx -->
+		<OutputFiles>Septeuil</OutputFiles>
+		<FlgOutputXml>No</FlgOutputXml>
+		<FlgOutputRecords>Yes</FlgOutputRecords>
+
+		<Smooth>
+			<TopLeftCorner>
+				<Lat>48.90299</Lat>
+				<Lon>1.669910</Lon>
+			</TopLeftCorner>
+			<BottomRightCorner>
+				<Lat>48.90074</Lat>
+				<Lon>1.671940</Lon>
+			</BottomRightCorner>
+		</Smooth>
+
+		<Smooth>
+			<TopLeftCorner>
+				<Lat>48.90118</Lat>
+				<Lon>1.670760</Lon>
+			</TopLeftCorner>
+			<BottomRightCorner>
+				<Lat>48.89864</Lat>
+				<Lon>1.671810</Lon>
+			</BottomRightCorner>
+		</Smooth>
+
+		<Smooth>
+			<TopLeftCorner>
+				<Lat>48.89759</Lat>
+				<Lon>1.670700</Lon>
+			</TopLeftCorner>
+			<BottomRightCorner>
+				<Lat>48.89730</Lat>
+				<Lon>1.671880</Lon>
+			</BottomRightCorner>
+		</Smooth>
+
+		<Smooth>
+			<TopLeftCorner>
+				<Lat>48.89266</Lat>
+				<Lon>1.634850</Lon>
+			</TopLeftCorner>
+			<BottomRightCorner>
+				<Lat>48.89226</Lat>
+				<Lon>1.636100</Lon>
+			</BottomRightCorner>
+		</Smooth>
+
+		<Smooth>
+			<TopLeftCorner>
+				<Lat>48.89093</Lat>
+				<Lon>1.630510</Lon>
+			</TopLeftCorner>
+			<BottomRightCorner>
+				<Lat>48.89021</Lat>
+				<Lon>1.631880</Lon>
+			</BottomRightCorner>
+		</Smooth>
+
+		<Smooth>
+			<TopLeftCorner>
+				<Lat>48.90329</Lat>
+				<Lon>1.618090</Lon>
+			</TopLeftCorner>
+			<BottomRightCorner>
+				<Lat>48.90301</Lat>
+				<Lon>1.618530</Lon>
+			</BottomRightCorner>
+		</Smooth>
+
+		<Waypoint>
+			<Name>Pause à mi-parcours</Name>
+			<Description>Pause</Description>
+			<Lat>48.90315</Lat>
+			<Lon>1.618310</Lon>
+		</Waypoint>
+	</Trace>
+
+	<Trace name="Jouy-en-Josas (Split)" >
+		<!-- Name with suffix -->
+		<InputFileName>Jouy-en-Josas.txt</InputFileName>
+
+		<!-- Name without suffix for .txt, .xml and .gpx -->
+		<OutputFiles>Jouy-en-Josas</OutputFiles>
+		<FlgSplit>Yes</FlgSplit>
+	</Trace>
+
+	<Trace name="Jouy-en-Josas" >
+		<!-- Informations for <metadata> tag -->
+		<Author>Claudius</Author>
+		<Description>Jouy-en-Josas</Description>
+
+		<TrackpointName>Jouy-en-Josas</TrackpointName>
+
+		<!-- Name with suffix -->
+		<InputFileName>Jouy-en-Josas.20141026</InputFileName>
+
+		<!-- Local time -->
+		<StartDate>2014/10/26 07:44:00</StartDate>
+		<EndDate>  2014/10/26 13:20:00</EndDate>
+		<!-- No Duration because EndDate YYYY/MM/DD HH:MM:SS-->
+		<!-- Duration>2:15</Duration -->
+
+		<!-- Name without suffix for .txt, .xml and .gpx -->
+		<OutputFiles>Jouy-en-Josas</OutputFiles>
+		<FlgOutputXml>No</FlgOutputXml>
+		<FlgOutputRecords>Yes</FlgOutputRecords>
+
+		<Waypoint>
+			<Name>Pause à mi-parcours près d'un sequoia géant</Name>
+			<Description>Pause</Description>
+			<Lat>48.77640</Lat>
+			<Lon>2.176630</Lon>
+		</Waypoint>
+	</Trace>
+
+	<Trace name="Morainvilliers (Split)" >
+		<!-- Name with suffix -->
+		<InputFileName>Morainvilliers.txt</InputFileName>
+
+		<!-- Name without suffix for .txt, .xml and .gpx -->
+		<OutputFiles>Morainvilliers</OutputFiles>
+		<FlgSplit>Yes</FlgSplit>
+	</Trace>
+
+	<Trace name="Morainvilliers" >
+		<!-- Informations for <metadata> tag -->
+		<Author>Claudius</Author>
+		<Description>Morainvilliers</Description>
+
+		<TrackpointName>Morainvilliers</TrackpointName>
+
+		<!-- Name with suffix -->
+		<InputFileName>Morainvilliers.20141102</InputFileName>
+
+		<!-- Local time -->
+		<StartDate>2014/11/02 09:17:00</StartDate>
+		<EndDate>  2014/11/02 13:20:00</EndDate>
+		<!-- No Duration because EndDate YYYY/MM/DD HH:MM:SS-->
+		<!-- Duration>2:15</Duration -->
+
+		<!-- Name without suffix for .txt, .xml and .gpx -->
+		<OutputFiles>Morainvilliers</OutputFiles>
+		<FlgOutputXml>No</FlgOutputXml>
+		<FlgOutputRecords>Yes</FlgOutputRecords>
+
+		<Waypoint>
+			<Name>Pause à mi-parcours</Name>
+			<Description> </Description>
+			<Time>11:00:00</Time>
+		</Waypoint>
+	</Trace>
+
+	<Trace name="La Mérantaise (Split)" >
+		<!-- Name with suffix -->
+		<InputFileName>LaMerantaise.txt</InputFileName>
+
+		<!-- Name without suffix for .txt, .xml and .gpx -->
+		<OutputFiles>LaMerantaise</OutputFiles>
+		<FlgSplit>Yes</FlgSplit>
+	</Trace>
+
+	<Trace name="La Mérantaise" >
+		<!-- Informations for <metadata> tag -->
+		<Author>Claudius</Author>
+		<Description>LaMerantaise</Description>
+
+		<TrackpointName>LaMerantaise</TrackpointName>
+
+		<!-- Name with suffix -->
+		<InputFileName>LaMerantaise.20141109</InputFileName>
+
+		<!-- Local time -->
+		<StartDate>2014/11/09 11:44:00</StartDate>
+		<EndDate>  2014/11/09 18:00:00</EndDate>
+		<!-- No Duration because EndDate YYYY/MM/DD HH:MM:SS-->
+		<!-- Duration>2:15</Duration -->
+
+		<!-- Name without suffix for .txt, .xml and .gpx -->
+		<OutputFiles>LaMerantaise</OutputFiles>
+		<FlgOutputXml>No</FlgOutputXml>
+		<FlgOutputRecords>Yes</FlgOutputRecords>
+
+		<Smooth>
+			<TopLeftCorner>
+				<Lat>48.72611</Lat>
+				<Lon>2.125310</Lon>
+			</TopLeftCorner>
+			<BottomRightCorner>
+				<Lat>48.72578</Lat>
+				<Lon>2.125590</Lon>
+			</BottomRightCorner>
+		</Smooth>
+
+		<Smooth>
+			<TopLeftCorner>
+				<Lat>48.72085</Lat>
+				<Lon>2.116900</Lon>
+			</TopLeftCorner>
+			<BottomRightCorner>
+				<Lat>48.72049</Lat>
+				<Lon>2.117470</Lon>
+			</BottomRightCorner>
+		</Smooth>
+
+		<Waypoint>
+			<Name>Pause à mi-parcours</Name>
+			<Description>Pause</Description>
+			<Lat>48.72047</Lat>
+			<Lon>2.117370</Lon>
+		</Waypoint>
+
+		<Waypoint>
+			<Name>Point de vue sur la vallée</Name>
+			<Description>Pause</Description>
+			<Lat>48.707310</Lat>
+			<Lon>2.1193600</Lon>
+		</Waypoint>
+	</Trace>
+
+		<Trace name="Morainvilliers (Split)" >
+		<!-- Name with suffix -->
+		<InputFileName>Morainvilliers.txt</InputFileName>
+
+		<!-- Name without suffix for .txt, .xml and .gpx -->
+		<OutputFiles>Morainvilliers</OutputFiles>
+		<FlgSplit>Yes</FlgSplit>
+	</Trace>
+
+	<Trace name="Morainvilliers" >
+		<!-- Informations for <metadata> tag -->
+		<Author>Claudius</Author>
+		<Description>Morainvilliers</Description>
+
+		<TrackpointName>Morainvilliers</TrackpointName>
+
+		<!-- Name with suffix -->
+		<InputFileName>Morainvilliers.20141102</InputFileName>
+
+		<!-- Local time -->
+		<StartDate>2014/11/02 09:17:00</StartDate>
+		<EndDate>  2014/11/02 13:20:00</EndDate>
+		<!-- No Duration because EndDate YYYY/MM/DD HH:MM:SS-->
+		<!-- Duration>2:15</Duration -->
+
+		<!-- Name without suffix for .txt, .xml and .gpx -->
+		<OutputFiles>Morainvilliers</OutputFiles>
+		<FlgOutputXml>No</FlgOutputXml>
+		<FlgOutputRecords>Yes</FlgOutputRecords>
+
+		<Waypoint>
+			<Name>Pause à mi-parcours</Name>
+			<Description> </Description>
+			<Lat>48.707310</Lat>
+			<Lon>2.1193600</Lon>
+		</Waypoint>
+	</Trace>
+
+	<Trace name="Le Perray (Split)" >
+		<!-- Name with suffix -->
+		<InputFileName>LePerrayPommeraie.txt</InputFileName>
+
+		<!-- Name without suffix for .txt, .xml and .gpx -->
+		<OutputFiles>LePerray</OutputFiles>
+		<FlgSplit>Yes</FlgSplit>
+	</Trace>
+
+	<Trace name="Le Perray" >
+		<!-- Informations for <metadata> tag -->
+		<Author>Claudius</Author>
+		<Description>Le Perray-en-Yvelines (Bois Domianal de la Pommeraie)</Description>
+
+		<TrackpointName>LePerray</TrackpointName>
+
+		<!-- Name with suffix -->
+		<InputFileName>LePerray.20141207</InputFileName>
+
+		<!-- Local time -->
+		<StartDate>2014/12/07 09:00:00</StartDate>
+		<EndDate>  2014/12/07 13:00:00</EndDate>
+		<!-- No Duration because EndDate YYYY/MM/DD HH:MM:SS-->
+		<!-- Duration>2:15</Duration -->
+
+		<!-- Name without suffix for .txt, .xml and .gpx -->
+		<OutputFiles>LePerray</OutputFiles>
+		<FlgOutputXml>No</FlgOutputXml>
+		<FlgOutputRecords>Yes</FlgOutputRecords>
+
+		<Waypoint>
+			<Name>Pause à mi-parcours</Name>
+			<Description> </Description>
+			<Time>11:04:00</Time>
+		</Waypoint>
+	</Trace>
+
+	<Trace name="Elancourt La Revanche (Split)" >
+		<!-- Name with suffix -->
+		<InputFileName>ElancourtLaRevanche.txt</InputFileName>
+
+		<!-- Name without suffix for .txt, .xml and .gpx -->
+		<OutputFiles>ElancourtLaRevanche</OutputFiles>
+		<FlgSplit>Yes</FlgSplit>
+	</Trace>
+
+	<Trace name="Elancourt La Revanche" >
+		<!-- Informations for <metadata> tag -->
+		<Author>Claudius</Author>
+		<Description>Boucle autour d'Elancourt (Colline de la Revanche)</Description>
+
+		<TrackpointName>ElancourtLaRevanche</TrackpointName>
+
+		<!-- Name with suffix -->
+		<InputFileName>ElancourtLaRevanche.20141221</InputFileName>
+
+		<!-- Local time -->
+		<StartDate>2014/12/21 08:30:00</StartDate>
+		<EndDate>  2014/12/21 13:00:00</EndDate>
+		<!-- No Duration because EndDate YYYY/MM/DD HH:MM:SS-->
+		<!-- Duration>2:15</Duration -->
+
+		<!-- Name without suffix for .txt, .xml and .gpx -->
+		<OutputFiles>ElancourtLaRevanche</OutputFiles>
+		<FlgOutputXml>No</FlgOutputXml>
+		<FlgOutputRecords>Yes</FlgOutputRecords>
+
+		<Waypoint>
+			<Name>Sommet de la Colline de la Revanche</Name>
+			<Description> </Description>
+			<Time>09:27:32</Time>
+		</Waypoint>
+
+		<Waypoint>
+			<Name>Pause à mi-parcours (Bassin de la Muette)</Name>
+			<Description> </Description>
+			<Time>10:12:00</Time>
+		</Waypoint>
+	</Trace>
+
+	<Trace name="Le Mesnil-Saint-Denis (Split)" >
+		<!-- Name with suffix -->
+		<InputFileName>LeMesnilStDenis.txt</InputFileName>
+
+		<!-- Name without suffix for .txt, .xml and .gpx -->
+		<OutputFiles>LeMesnilStDenis</OutputFiles>
+		<FlgSplit>Yes</FlgSplit>
+	</Trace>
+
+	<Trace name="Le Mesnil-Saint-Denis" >
+		<!-- Informations for <metadata> tag -->
+		<Author>Claudius</Author>
+		<Description>Boucle autour du Mesnil-Saint-Denis</Description>
+
+		<TrackpointName>LeMesnilStDenis</TrackpointName>
+
+		<!-- Name with suffix -->
+		<InputFileName>LeMesnilStDenis.20150104</InputFileName>
+
+		<!-- Local time -->
+		<StartDate>2015/01/04 08:30:00</StartDate>
+		<EndDate>  2015/01/04 13:00:00</EndDate>
+		<!-- No Duration because EndDate YYYY/MM/DD HH:MM:SS-->
+		<!-- Duration>2:15</Duration -->
+
+		<!-- Name without suffix for .txt, .xml and .gpx -->
+		<OutputFiles>LeMesnilStDenis</OutputFiles>
+		<FlgOutputXml>No</FlgOutputXml>
+		<FlgOutputRecords>Yes</FlgOutputRecords>
+		<FlgInverse>Yes</FlgInverse>
+
+		<Waypoint>
+			<Name>Pause à mi-parcours</Name>
+			<Description> </Description>
+			<Lat>48.71983</Lat>
+			<Lon>1.959230</Lon>
+		</Waypoint>
+
+		<Waypoint>
+			<Name>Passage à gué de l&#39;Yvette</Name>
+			<Description> </Description>
+			<Lat>48.72193</Lat>
+			<Lon>1.973480</Lon>
+		</Waypoint>
+
+	</Trace>
+
+	<Trace name="Le Perray-en-Yvelines (Split)" >
+		<!-- Name with suffix -->
+		<InputFileName>LePerrayRigolesDuRoi.txt</InputFileName>
+
+		<!-- Name without suffix for .txt, .xml and .gpx -->
+		<OutputFiles>LePerrayRigolesDuRoi</OutputFiles>
+		<FlgSplit>Yes</FlgSplit>
+	</Trace>
+
+	<Trace name="Le Perray-en-Yvelines" >
+		<!-- Informations for <metadata> tag -->
+		<Author>Claudius</Author>
+		<Description>Le Perray-en-Yvelines (La rivière du Roi Soleil)</Description>
+
+		<TrackpointName>LePerrayRigolesDuRoi</TrackpointName>
+
+		<!-- Name with suffix -->
+		<InputFileName>LePerrayRigolesDuRoi.20150201</InputFileName>
+
+		<!-- Local time -->
+		<StartDate>2015/02/01 08:30:00</StartDate>
+		<EndDate>  2015/02/01 13:00:00</EndDate>
+		<!-- No Duration because EndDate YYYY/MM/DD HH:MM:SS-->
+		<!-- Duration>2:15</Duration -->
+
+		<!-- Name without suffix for .txt, .xml and .gpx -->
+		<OutputFiles>LePerrayRigolesDuRoi</OutputFiles>
+		<FlgOutputXml>No</FlgOutputXml>
+		<FlgOutputRecords>Yes</FlgOutputRecords>
+		<FlgInverse>Yes</FlgInverse>
+
+		<Waypoint>
+			<Name>Pause à mi-parcours</Name>
+			<Description> </Description>
+			<Lat>48.65771</Lat>
+			<Lon>1.885240</Lon>
+		</Waypoint>
+
+		<Smooth>
+			<TopLeftCorner>
+				<Lat>48.69339</Lat>
+				<Lon>1.855710</Lon>
+			</TopLeftCorner>
+			<BottomRightCorner>
+				<Lat>48.69218</Lat>
+				<Lon>1.857230</Lon>
+			</BottomRightCorner>
+		</Smooth>
+
+	</Trace>
+
+	<Trace name="Versailles (Split)" >
+		<!-- Name with suffix -->
+		<InputFileName>Versailles.txt</InputFileName>
+
+		<!-- Name without suffix for .txt, .xml and .gpx -->
+		<OutputFiles>Versailles</OutputFiles>
+		<FlgSplit>Yes</FlgSplit>
+	</Trace>
+
+	<Trace name="Versailles" >
+		<!-- Informations for <metadata> tag -->
+		<Author>Claudius</Author>
+		<Description>Versailles</Description>
+
+		<TrackpointName>Versailles</TrackpointName>
+
+		<!-- Name with suffix -->
+		<InputFileName>Versailles.20150222</InputFileName>
+
+		<!-- Local time -->
+		<StartDate>2015/02/22 08:30:00</StartDate>
+		<EndDate>  2015/02/22 13:00:00</EndDate>
+		<!-- No Duration because EndDate YYYY/MM/DD HH:MM:SS-->
+		<!-- Duration>2:15</Duration -->
+
+		<!-- Name without suffix for .txt, .xml and .gpx -->
+		<OutputFiles>Versailles</OutputFiles>
+		<FlgOutputXml>No</FlgOutputXml>
+		<FlgOutputRecords>Yes</FlgOutputRecords>
+		<FlgInverse>No</FlgInverse>
+	</Trace>
+
+	<Trace name="Fôret de Marly-le-Roi (Split)" >
+		<!-- Name with suffix -->
+		<InputFileName>ForetMarlyLeRoi.txt</InputFileName>
+
+		<!-- Name without suffix for .txt, .xml and .gpx -->
+		<OutputFiles>ForetMarlyLeRoi</OutputFiles>
+		<FlgSplit>Yes</FlgSplit>
+	</Trace>
+
+	<Trace name="Fôret de Marly-le-Roi" >
+		<!-- Informations for <metadata> tag -->
+		<Author>Claudius</Author>
+		<Description>ForetMarlyLeRoi</Description>
+
+		<TrackpointName>ForetMarlyLeRoi</TrackpointName>
+
+		<!-- Name with suffix -->
+		<InputFileName>ForetMarlyLeRoi.20150913</InputFileName>
+
+		<!-- Local time -->
+		<StartDate>2015/09/13 08:05:00</StartDate>
+		<EndDate>  2015/09/13 11:15:00</EndDate>
+		<!-- No Duration because EndDate YYYY/MM/DD HH:MM:SS-->
+		<!-- Duration>2:15</Duration -->
+
+		<!-- Name without suffix for .txt, .xml and .gpx -->
+		<OutputFiles>ForetMarlyLeRoi</OutputFiles>
+		<FlgOutputXml>No</FlgOutputXml>
+		<FlgOutputRecords>Yes</FlgOutputRecords>
+		<FlgInverse>No</FlgInverse>
+
+		<Waypoint>
+			<Name>Non, ce n'est pas par là ;-)</Name>
+			<Description> </Description>
+			<Lat>48.87476</Lat>
+			<Lon>2.046520</Lon>
+		</Waypoint>
+		<Waypoint>
+			<Name>Pause</Name>
+			<Description> </Description>
+			<Time>10:00:00</Time>
+		</Waypoint>
+	</Trace>
+
+	<Trace name="Saint-Lambert (Split)" >
+		<!-- Name with suffix -->
+		<InputFileName>StLambert.txt</InputFileName>
+
+		<!-- Name without suffix for .txt, .xml and .gpx -->
+		<OutputFiles>StLambert</OutputFiles>
+		<FlgSplit>Yes</FlgSplit>
+	</Trace>
+
+	<Trace name="Saint-Lambert" >
+		<!-- Informations for <metadata> tag -->
+		<Author>Claudius</Author>
+		<Description>StLambert</Description>
+
+		<TrackpointName>StLambert</TrackpointName>
+
+		<!-- Name with suffix -->
+		<InputFileName>StLambert.20150910</InputFileName>
+
+		<!-- Local time -->
+		<StartDate>2015/09/10 12:00:00</StartDate>
+		<EndDate>  2015/09/10 20:00:00</EndDate>
+		<!-- No Duration because EndDate YYYY/MM/DD HH:MM:SS-->
+		<!-- Duration>2:15</Duration -->
+
+		<!-- Name without suffix for .txt, .xml and .gpx -->
+		<OutputFiles>StLambert</OutputFiles>
+		<FlgOutputXml>No</FlgOutputXml>
+		<FlgOutputRecords>Yes</FlgOutputRecords>
+		<FlgInverse>No</FlgInverse>
+
+		<!-- Waypoint>
+			<Name>Non, ce n'est pas par là ;-)</Name>
+			<Description> </Description>
+			<Lat>48.87476</Lat>
+			<Lon>2.046520</Lon>
+		</Waypoint>
+		<Waypoint>
+			<Name>Pause</Name>
+			<Description> </Description>
+			<Time>10:00:00</Time>
+		</Waypoint -->
+	</Trace>
+
+	<Trace name="Le Mesnil-Sevin (Split)" >
+		<!-- Name with suffix -->
+		<InputFileName>LeMesnilSevin.txt</InputFileName>
+
+		<!-- Name without suffix for .txt, .xml and .gpx -->
+		<OutputFiles>LeMesnilSevin</OutputFiles>
+		<FlgSplit>Yes</FlgSplit>
+	</Trace>
+
+	<Trace name="Le Mesnil-Sevin" >
+		<!-- Informations for <metadata> tag -->
+		<Author>Claudius</Author>
+		<Description>LeMesnilSevin</Description>
+
+		<TrackpointName>LeMesnilSevin</TrackpointName>
+
+		<!-- Name with suffix -->
+		<InputFileName>LeMesnilSevin.20150924</InputFileName>
+
+		<!-- Local time -->
+		<StartDate>2015/09/24 12:52:00</StartDate>
+		<EndDate>  2015/09/24 16:22:00</EndDate>
+		<!-- No Duration because EndDate YYYY/MM/DD HH:MM:SS-->
+		<!-- Duration>2:15</Duration -->
+
+		<!-- Name without suffix for .txt, .xml and .gpx -->
+		<OutputFiles>LeMesnilSevin</OutputFiles>
+		<FlgOutputXml>No</FlgOutputXml>
+		<FlgOutputRecords>Yes</FlgOutputRecords>
+		<FlgInverse>No</FlgInverse>
+	</Trace>
+
+	<Trace name="Port-Royal des Champs (Split)" >
+		<!-- Name with suffix -->
+		<InputFileName>Port-RoyalDesChamps.txt</InputFileName>
+
+		<!-- Name without suffix for .txt, .xml and .gpx -->
+		<OutputFiles>Port-RoyalDesChamps</OutputFiles>
+		<FlgSplit>Yes</FlgSplit>
+	</Trace>
+
+	<Trace name="Port-Royal des Champs" >
+		<!-- Informations for <metadata> tag -->
+		<Author>Claudius</Author>
+		<Description>Port-RoyalDesChamps</Description>
+
+		<TrackpointName>Port-RoyalDesChamps</TrackpointName>
+
+		<!-- Name with suffix -->
+		<InputFileName>Port-RoyalDesChamps.20151015</InputFileName>
+
+		<!-- Local time -->
+		<StartDate>2015/10/15 12:00:00</StartDate>
+		<EndDate>  2015/10/15 20:00:00</EndDate>
+		<!-- No Duration because EndDate YYYY/MM/DD HH:MM:SS-->
+		<!-- Duration>2:15</Duration -->
+
+		<!-- Name without suffix for .txt, .xml and .gpx -->
+		<OutputFiles>Port-RoyalDesChamps</OutputFiles>
+		<FlgOutputXml>No</FlgOutputXml>
+		<FlgOutputRecords>Yes</FlgOutputRecords>
+		<FlgInverse>No</FlgInverse>
+	</Trace>
+
+</Configuration>
